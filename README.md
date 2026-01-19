@@ -72,25 +72,43 @@ Die Kern-Innovation:
 
 ### 4. Diagonal Onboarding Scroll (gebetshaus.org inspiriert)
 
-Der **Treppen-Effekt**:
-- Container: `h-[400vh]` (4x Viewport Height)
-- Sticky Inner Container: Bleibt fixiert während User scrollt
-- **4 Steps** die diagonal ein/ausfliegen:
-  - **Active Step**: `translate-x-0 translate-y-0 opacity-100`
-  - **Past Step**: `-translate-x-full translate-y-full` (links unten raus)
-  - **Future Step**: `translate-x-full -translate-y-full` (rechts oben wartend)
+Der **Treppen-Effekt** - Kamera-Bewegung durch Wrapper-Animation:
 
-**Scroll Progress Tracking:**
+**WICHTIG: Wrapper animieren, NICHT einzelne Steps!**
+- Container: `h-[500vh]` (5 Seiten für 4 Bewegungen: 4 × 125vh = 500vh)
+- Sticky Viewport: Bleibt fixiert während User scrollt
+- **Wrapper bewegt sich** diagonal (echter Kamera-Effekt):
+
+**GSAP Timeline (empfohlene Implementierung):**
+```typescript
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.onboarding-section',
+    pin: '.onboarding-viewport',
+    scrub: 1,              // 1s Smooth-Lag (sweet spot)
+    start: 'top top',
+    end: '+=500%',         // 500vh Scroll-Bereich
+  }
+});
+
+// Treppen-Animation: x → y → x → y (KUMULATIV!)
+tl.to('.wrapper', { x: '-100vw', duration: 1, ease: 'power2.inOut' })   // 1→2
+  .to('.wrapper', { y: '-100vh', duration: 1, ease: 'power2.inOut' }, '>') // 2→3
+  .to('.wrapper', { x: '-200vw', duration: 1, ease: 'power2.inOut' }, '>') // 3→4
+  .to('.wrapper', { y: '-200vh', duration: 1, ease: 'power2.inOut' }, '>'); // 4→5
+```
+
+**Step Index Berechnung (mit Clamp!):**
 ```javascript
-const stepIndex = Math.floor(scrollProgress * 4);
-// 0-3 Steps basierend auf Scroll-Position
+const stepIndex = Math.min(
+  Math.floor(scrollProgress * steps.length),
+  steps.length - 1  // Verhindert Index-Out-of-Bounds bei progress=1
+);
 ```
 
 **Background Animation:**
-- Grid Pattern bewegt sich entgegengesetzt (Camera-Effekt)
-- `transform: translate(-progress * 200px, -progress * 200px)`
-
-**KEIN CSS Scroll Snap** - rein GSAP/JavaScript basiert für präzise Kontrolle
+- Grid Pattern bewegt sich entgegengesetzt zur Wrapper-Bewegung (Camera-Effekt)
+- `transform: translate(${-progress * 200}px, ${-progress * 200}px)` (korrekte Syntax ohne Leerzeichen!)
 
 ## 📂 Projektstruktur
 
