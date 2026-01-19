@@ -19,7 +19,7 @@
     "subline": "Wir beenden den Verwaltungs-Irrsinn. Digitale Effizienz trifft auf 100 Jahre textile Erfahrung.",
     "cta_primary": "Jetzt Effizienz-Check starten",
     "video_trigger": "Film ansehen (1:30 min)",
-    "background_image": "hero-industrial-clean.webp"
+    "background_image": "hero-industrial-clean.svg"
   },
   "elevator_pitch": {
     "section_id": "pitch",
@@ -27,6 +27,223 @@
     "video_url": "/videos/elevator-pitch-poeppel.mp4",
     "poster_image": "/images/video-thumbnail-pitch.webp",
     "description": "Sehen Sie, wie wir für Bauunternehmen den Knoten aus Bestellung, Logistik und Abrechnung lösen."
+  },
+  "video_showcase": {
+    "section_id": "video-showcase",
+    "headline": "Workwear Management in 90 Sekunden",
+    "subheadline": "Sehen Sie, wie wir komplexe Beschaffungsprozesse in ein einfaches digitales System verwandeln.",
+    "video_url": "/videos/showcase-poeppel.mp4",
+    "poster_image": "/images/video-showcase-poster.webp",
+    "cta_text": "Video ansehen"
+  },
+  "problem_stacking": {
+    "section_id": "problem",
+    "headline": "Die Kaskade der Ineffizienz",
+    "subheadline": "Warum traditionelle Beschaffung Sie mehr kostet, als auf der Rechnung steht.",
+    "cards": [
+      {
+        "id": 1,
+        "title": "Kosten & Systeme",
+        "sticky_top": "8rem",
+        "z_index": 10,
+        "bg_color": "dark",
+        "segments": [
+          {
+            "title": "Lieferzeiten & Reklamationen",
+            "description": "Verzögerungen und Fehler führen zu Unzufriedenheit und Mehrkosten.",
+            "icon": "package"
+          },
+          {
+            "title": "Kostenüberschreitungen",
+            "description": "Hohe Ausgaben durch Fehlbestellungen und fehlende Prozessüberwachung.",
+            "icon": "dollar"
+          },
+          {
+            "title": "System-Integration",
+            "description": "Probleme bei der Anbindung an bestehende ERP- und Personalsysteme.",
+            "icon": "database"
+          },
+          {
+            "title": "Mangelnde Flexibilität",
+            "description": "Jede Änderung erfordert aufwendige Anpassung und häufige Rücksprachen.",
+            "icon": "layers"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Prozesse & Personal",
+        "sticky_top": "10rem",
+        "z_index": 20,
+        "bg_color": "white",
+        "segments": [
+          {
+            "title": "Mitarbeiterwechsel",
+            "description": "Ständige Anpassung von Budgets und Bestellungen bei Personalveränderungen.",
+            "icon": "users"
+          },
+          {
+            "title": "Intransparenz",
+            "description": "Schwierigkeiten, Bestände, Verbräuche und Budgets zu überblicken.",
+            "icon": "trending"
+          },
+          {
+            "title": "Manuelle Prozesse",
+            "description": "Unübersichtliche Bestell- und Budgetprozesse führen zu Fehlern.",
+            "icon": "clock"
+          },
+          {
+            "title": "Unterschiedliche Anforderungen",
+            "description": "Verschiedene Bedürfnisse für unterschiedliche Tätigkeiten müssen berücksichtigt werden.",
+            "icon": "settings"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Compliance & Risiken",
+        "sticky_top": "12rem",
+        "z_index": 30,
+        "bg_color": "white",
+        "segments": [
+          {
+            "title": "Dokumentationspflichten",
+            "description": "Einhaltung und Nachweis von Dokumentationspflichten ist aufwendig.",
+            "icon": "file"
+          },
+          {
+            "title": "Keine Standards",
+            "description": "Ineffiziente Abläufe durch unterschiedliche Prozesse in Abteilungen.",
+            "icon": "alert"
+          },
+          {
+            "title": "Sonderanforderungen",
+            "description": "Individuelle Anpassungen und deren Dokumentation sind komplex.",
+            "icon": "zap"
+          },
+          {
+            "title": "Sicherheitsrisiken",
+            "description": "Falsche oder nicht rechtzeitig gelieferte PSA können zu Unfällen führen.",
+            "icon": "shield"
+          }
+        ]
+      }
+    ]
+  },
+  "potentials": {
+    "section_id": "potentials",
+    "headline": "Ihre Potentiale. Unsere Lösungen.",
+    "subheadline": "Wir verwandeln versteckte Kostentreiber in messbare Einsparungen und echte Effizienzgewinne.",
+    "cards": [
+      {
+        "id": 1,
+        "title": "Budgettransparenz",
+        "description": "Echtzeit-Übersicht über alle Ausgaben. Keine versteckten Kosten, keine Überraschungen am Monatsende.",
+        "icon": "eye",
+        "color": "blue"
+      },
+      {
+        "id": 2,
+        "title": "Zeitersparnis",
+        "description": "Bis zu 70% weniger Verwaltungsaufwand durch Automatisierung und Self-Service für Mitarbeiter.",
+        "icon": "trending",
+        "color": "green"
+      },
+      {
+        "id": 3,
+        "title": "Kostenkontrolle",
+        "description": "Reduzierung von Fehlbestellungen und Retouren um bis zu 90% durch präzise Größenerfassung.",
+        "icon": "dollar",
+        "color": "orange"
+      },
+      {
+        "id": 4,
+        "title": "Prozessoptimierung",
+        "description": "Nahtlose Integration in bestehende Systeme. Automatisierte Workflows von Bestellung bis Abrechnung.",
+        "icon": "workflow",
+        "color": "purple"
+      }
+    ]
+  },
+  "testimonials_banner": {
+    "section_id": "testimonials-banner",
+    "headline": "Was unsere Partner sagen",
+    "items": [
+      {
+        "quote": "Seit wir das System nutzen, hat sich unser Verwaltungsaufwand halbiert. Die Mitarbeiter sind begeistert von der einfachen Bestellung.",
+        "author": "Michael Weber",
+        "role": "Einkaufsleiter",
+        "company": "Bauunternehmung Weber GmbH"
+      },
+      {
+        "quote": "Die Anprobetage waren ein Gamechanger. Endlich passt alles und wir haben keine Retouren mehr.",
+        "author": "Julia Schmidt",
+        "role": "HR Managerin",
+        "company": "Metallbau Schmidt AG"
+      },
+      {
+        "quote": "Die digitale Lösung hat unsere Beschaffungsprozesse revolutioniert. Alles ist transparent und nachvollziehbar.",
+        "author": "Thomas Müller",
+        "role": "Geschäftsführer",
+        "company": "Handwerksbetrieb Müller"
+      },
+      {
+        "quote": "Endlich haben wir die Kosten im Griff. Das Budget-System funktioniert perfekt für unsere 200 Mitarbeiter.",
+        "author": "Sandra Klein",
+        "role": "Controlling",
+        "company": "Industrieservice Klein GmbH"
+      }
+    ]
+  },
+  "onboarding_diagonal": {
+    "section_id": "onboarding",
+    "headline": "Der Pöppel Onboarding-Prozess",
+    "steps": [
+      {
+        "id": "01",
+        "title": "Kickoff & Analyse",
+        "description": "Wir analysieren Ihre Tragegewohnheiten, Budgets und bestehende Prozesse vor Ort.",
+        "details": [
+          "Bedarfsanalyse direkt bei Ihren Teams",
+          "Budget-Mapping und Kostentransparenz",
+          "Prozess-Dokumentation"
+        ],
+        "image_placeholder": "Team Meeting"
+      },
+      {
+        "id": "02",
+        "title": "Konzept & Budget",
+        "description": "Gemeinsam entwickeln wir das passende Sortiment und definieren klare Budget-Rahmen.",
+        "details": [
+          "Sortiments-Vorschläge basierend auf Analyse",
+          "Rollenbasierte Budget-Verteilung",
+          "Transparente Kalkulation"
+        ],
+        "image_placeholder": "Planning Session"
+      },
+      {
+        "id": "03",
+        "title": "Anprobe Event",
+        "description": "Unser Team kommt zu Ihnen. Zero-Retouren-Strategie durch Anprobe vor Ort.",
+        "details": [
+          "Mobile Anprobe direkt bei Ihnen",
+          "Größenerfassung für digitales System",
+          "Sofort-Feedback zu Passform"
+        ],
+        "image_placeholder": "Fitting Event"
+      },
+      {
+        "id": "04",
+        "title": "Go-Live System",
+        "description": "Mitarbeiter bestellen eigenständig über das rollenbasierte Bestellsystem.",
+        "details": [
+          "Digitale Plattform für Selbstbestellung",
+          "Automatische Budget-Kontrolle",
+          "24/7 Verfügbarkeit"
+        ],
+        "image_placeholder": "Digital Platform"
+      }
+    ]
   },
   "problem_section": {
     "title": "Die Last der manuellen Verwaltung",
@@ -71,6 +288,104 @@
         "headline": "Smart Ordering",
         "description": "Mitarbeiter bestellen eigenständig über das Rollen-System.",
         "video_loop": "/videos/loop-software-demo.mp4"
+      }
+    ]
+  },
+  "usps": {
+    "section_id": "usps",
+    "headline": "8 Gründe für Pöppel",
+    "subheadline": "Was uns zum bevorzugten Partner für modernes Workwear Management macht.",
+    "tiles": [
+      {
+        "id": 1,
+        "title": "100 Jahre Expertise",
+        "description": "Textile Kompetenz seit 1923 trifft auf modernste Digitaltechnologie.",
+        "icon": "award",
+        "color": "orange"
+      },
+      {
+        "id": 2,
+        "title": "Zero-Retouren-Strategie",
+        "description": "Anprobetage vor Ort für perfekte Passform von Anfang an.",
+        "icon": "target",
+        "color": "blue"
+      },
+      {
+        "id": 3,
+        "title": "Budget-Kontrolle",
+        "description": "Rollenbasierte Budgets mit Echtzeit-Übersicht und automatischer Kontrolle.",
+        "icon": "shield-check",
+        "color": "green"
+      },
+      {
+        "id": 4,
+        "title": "Digitale Plattform",
+        "description": "Intuitive Self-Service Bestellung für Mitarbeiter, 24/7 verfügbar.",
+        "icon": "smartphone",
+        "color": "purple"
+      },
+      {
+        "id": 5,
+        "title": "Persönlicher Service",
+        "description": "Fester Ansprechpartner für Ihre Anliegen, kein anonymes Call-Center.",
+        "icon": "user-check",
+        "color": "orange"
+      },
+      {
+        "id": 6,
+        "title": "Nahtlose Integration",
+        "description": "Anbindung an Ihre bestehenden ERP- und Personalsysteme.",
+        "icon": "link",
+        "color": "blue"
+      },
+      {
+        "id": 7,
+        "title": "Nachhaltigkeit",
+        "description": "Reduzierung von Retouren und optimierte Logistik schonen die Umwelt.",
+        "icon": "leaf",
+        "color": "green"
+      },
+      {
+        "id": 8,
+        "title": "Compliance-Sicher",
+        "description": "Automatische Dokumentation aller PSA-relevanten Prozesse.",
+        "icon": "file-check",
+        "color": "purple"
+      }
+    ]
+  },
+  "benefits": {
+    "section_id": "benefits",
+    "headline": "Der Pöppel-Vorteil",
+    "subheadline": "Messbare Ergebnisse, die Ihr Unternehmen voranbringen.",
+    "items": [
+      {
+        "id": 1,
+        "metric": "70%",
+        "title": "Weniger Verwaltungsaufwand",
+        "description": "Automatisierte Prozesse und Self-Service reduzieren den manuellen Aufwand drastisch.",
+        "icon": "trending-down"
+      },
+      {
+        "id": 2,
+        "metric": "90%",
+        "title": "Reduktion der Retourenquote",
+        "description": "Durch Anprobetage vor Ort und digitale Größenerfassung passen 98% aller Bestellungen beim ersten Mal.",
+        "icon": "check-circle"
+      },
+      {
+        "id": 3,
+        "metric": "100%",
+        "title": "Budget-Transparenz",
+        "description": "Echtzeit-Übersicht über alle Ausgaben und automatische Budgetkontrolle.",
+        "icon": "eye"
+      },
+      {
+        "id": 4,
+        "metric": "24/7",
+        "title": "Verfügbarkeit",
+        "description": "Mitarbeiter können jederzeit und von überall bestellen - kein Warten mehr.",
+        "icon": "clock"
       }
     ]
   },

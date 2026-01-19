@@ -1,0 +1,45 @@
+<svg width="2000" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Industrial Warehouse Placeholder Background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#475569" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Gradient -->
+  <rect width="2000" height="1200" fill="url(#grad1)"/>
+
+  <!-- Grid Pattern -->
+  <rect width="2000" height="1200" fill="url(#grid)"/>
+
+  <!-- Industrial Elements -->
+  <!-- Warehouse Structure Outline -->
+  <rect x="100" y="300" width="400" height="600" fill="none" stroke="#64748b" stroke-width="3" opacity="0.3"/>
+  <rect x="600" y="400" width="300" height="500" fill="none" stroke="#64748b" stroke-width="3" opacity="0.3"/>
+  <rect x="1000" y="350" width="350" height="550" fill="none" stroke="#64748b" stroke-width="3" opacity="0.3"/>
+  <rect x="1450" y="450" width="250" height="450" fill="none" stroke="#64748b" stroke-width="3" opacity="0.3"/>
+
+  <!-- Windows -->
+  <rect x="150" y="350" width="60" height="80" fill="#f97316" opacity="0.1"/>
+  <rect x="250" y="350" width="60" height="80" fill="#f97316" opacity="0.15"/>
+  <rect x="350" y="350" width="60" height="80" fill="#f97316" opacity="0.1"/>
+  <rect x="650" y="450" width="50" height="70" fill="#f97316" opacity="0.2"/>
+  <rect x="750" y="450" width="50" height="70" fill="#f97316" opacity="0.1"/>
+
+  <!-- Orange Accent Shapes (Workwear Theme) -->
+  <circle cx="1700" cy="200" r="80" fill="#f97316" opacity="0.1"/>
+  <circle cx="300" cy="150" r="50" fill="#fb923c" opacity="0.15"/>
+
+  <!-- Text Placeholder Indicator -->
+  <text x="1000" y="600" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" opacity="0.5" text-anchor="middle">
+    HERO BACKGROUND PLACEHOLDER
+  </text>
+  <text x="1000" y="640" font-family="Arial, sans-serif" font-size="16" fill="#64748b" opacity="0.4" text-anchor="middle">
+    Replace with: Unsplash Industrial Warehouse Image (WebP optimized)
+  </text>
+</svg>

@@ -72,6 +72,52 @@ export interface CtaFinalData {
   button_secondary: string;
 }
 
+export interface ProblemSegment {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ProblemCard {
+  id: number;
+  title: string;
+  sticky_top: string;
+  z_index: number;
+  bg_color: 'white' | 'dark';
+  segments: ProblemSegment[];
+}
+
+export interface ProblemStackingData {
+  section_id: string;
+  headline: string;
+  subheadline: string;
+  cards: ProblemCard[];
+}
+
+export interface OnboardingStep {
+  id: string;
+  title: string;
+  description: string;
+  details: string[];
+  image_placeholder: string;
+}
+
+export interface OnboardingDiagonalData {
+  section_id: string;
+  headline: string;
+  steps: OnboardingStep[];
+}
+
+export interface VideoShowcaseData {
+  section_id: string;
+  headline: string;
+  description: string;
+  video_url: string;
+  video_type: 'youtube' | 'vimeo' | 'html5';
+  poster_image?: string;
+  caption?: string;
+}
+
 export interface ContentData {
   metadata: {
     project: string;
@@ -81,6 +127,9 @@ export interface ContentData {
   navigation: NavigationData;
   hero: HeroData;
   elevator_pitch: ElevatorPitchData;
+  video_showcase?: VideoShowcaseData;
+  problem_stacking: ProblemStackingData;
+  onboarding_diagonal: OnboardingDiagonalData;
   problem_section: ProblemSectionData;
   horizontal_process: HorizontalProcessData;
   testimonials: TestimonialsData;
