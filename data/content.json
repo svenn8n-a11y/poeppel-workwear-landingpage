@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "project": "Pöppel Workwear Management",
+    "version": "1.1",
+    "theme": "Modern Industrial Scrollytelling"
+  },
+  "navigation": {
+    "brand": "Pöppel",
+    "links": [
+      { "label": "Konzept", "anchor": "pitch" },
+      { "label": "Prozess", "anchor": "process" },
+      { "label": "Erfolge", "anchor": "testimonials" },
+      { "label": "Wissen", "anchor": "whitepaper" },
+      { "label": "Kontakt", "anchor": "contact" }
+    ]
+  },
+  "hero": {
+    "headline": "Workwear Management neu gedacht.",
+    "subline": "Wir beenden den Verwaltungs-Irrsinn. Digitale Effizienz trifft auf 100 Jahre textile Erfahrung.",
+    "cta_primary": "Jetzt Effizienz-Check starten",
+    "video_trigger": "Film ansehen (1:30 min)",
+    "background_image": "hero-industrial-clean.webp"
+  },
+  "elevator_pitch": {
+    "section_id": "pitch",
+    "headline": "In 90 Sekunden zur Lösung",
+    "video_url": "/videos/elevator-pitch-poeppel.mp4",
+    "poster_image": "/images/video-thumbnail-pitch.webp",
+    "description": "Sehen Sie, wie wir für Bauunternehmen den Knoten aus Bestellung, Logistik und Abrechnung lösen."
+  },
+  "problem_section": {
+    "title": "Die Last der manuellen Verwaltung",
+    "description": "Arbeitskleidung zu managen ist kein Einkaufsthema – es ist ein Zeitfresser.",
+    "pain_points": [
+      {
+        "title": "Excel-Chaos",
+        "text": "Manuelle Budgetführung und unübersichtliche Bestandslisten bremsen Ihr Unternehmen aus."
+      },
+      {
+        "title": "Hohe Retourenquoten",
+        "text": "Falsche Größen und Fehlbestellungen führen zu massiven Logistikkosten."
+      }
+    ],
+    "whitepaper_download": {
+      "headline": "Vertiefen Sie Ihr Wissen",
+      "text": "Laden Sie unser Whitepaper zu den '5 größten Kostenfallen im Workwear-Management' herunter.",
+      "button_label": "Whitepaper PDF laden",
+      "file_url": "/downloads/whitepaper-herausforderungen.pdf"
+    }
+  },
+  "horizontal_process": {
+    "title": "Der 5-Schritte-Kreislauf",
+    "steps": [
+      {
+        "id": "01",
+        "label": "Analyse",
+        "headline": "Bedarf verstehen",
+        "description": "Wir analysieren Ihre Tragegewohnheiten vor Ort.",
+        "video_loop": "/videos/loop-analyse.mp4"
+      },
+      {
+        "id": "03",
+        "label": "Erlebnis",
+        "headline": "Anprobetage",
+        "description": "Unser Team kommt zu Ihnen. Zero-Retouren-Strategie durch Anprobe vor Ort.",
+        "video_loop": "/videos/loop-anprobe-event.mp4"
+      },
+      {
+        "id": "04",
+        "label": "Digital",
+        "headline": "Smart Ordering",
+        "description": "Mitarbeiter bestellen eigenständig über das Rollen-System.",
+        "video_loop": "/videos/loop-software-demo.mp4"
+      }
+    ]
+  },
+  "testimonials": {
+    "section_id": "testimonials",
+    "headline": "Erfolge, die für sich sprechen",
+    "items": [
+      {
+        "quote": "Seit wir das System nutzen, hat sich unser Verwaltungsaufwand halbiert. Die Mitarbeiter sind begeistert von der einfachen Bestellung.",
+        "author": "Max Mustermann",
+        "role": "Einkaufsleiter, Bauunternehmung XY",
+        "image": "/images/testimonial-max.webp"
+      },
+      {
+        "quote": "Die Anprobetage waren ein Gamechanger. Endlich passt alles und wir haben keine Retouren mehr.",
+        "author": "Julia Beispiel",
+        "role": "HR Managerin, Industrie GmbH",
+        "image": "/images/testimonial-julia.webp"
+      }
+    ]
+  },
+  "cta_final": {
+    "headline": "Bereit für das nächste Level?",
+    "text": "Lassen Sie uns gemeinsam den Weg zur digitalen Workwear-Strategie ebnen.",
+    "button_primary": "Beratungstermin vereinbaren",
+    "button_secondary": "Whitepaper herunterladen"
+  }
+}
