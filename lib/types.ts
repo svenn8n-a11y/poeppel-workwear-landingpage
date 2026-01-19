@@ -111,11 +111,68 @@ export interface OnboardingDiagonalData {
 export interface VideoShowcaseData {
   section_id: string;
   headline: string;
-  description: string;
+  subheadline: string;
   video_url: string;
-  video_type: 'youtube' | 'vimeo' | 'html5';
-  poster_image?: string;
-  caption?: string;
+  poster_image: string;
+  cta_text: string;
+}
+
+export interface PotentialCard {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
+export interface PotentialsData {
+  section_id: string;
+  headline: string;
+  subheadline: string;
+  cards: PotentialCard[];
+}
+
+export interface TestimonialsBannerItem {
+  quote: string;
+  author: string;
+  role: string;
+  company?: string;
+}
+
+export interface TestimonialsBannerData {
+  section_id: string;
+  headline: string;
+  items: TestimonialsBannerItem[];
+}
+
+export interface UspTile {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
+export interface UspsData {
+  section_id: string;
+  headline: string;
+  subheadline: string;
+  tiles: UspTile[];
+}
+
+export interface BenefitItem {
+  id: number;
+  metric: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface BenefitsData {
+  section_id: string;
+  headline: string;
+  subheadline: string;
+  items: BenefitItem[];
 }
 
 export interface ContentData {
