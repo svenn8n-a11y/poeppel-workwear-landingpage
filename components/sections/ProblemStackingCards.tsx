@@ -33,17 +33,19 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
 
     const cards = sectionRef.current.querySelectorAll('.problem-card');
 
-    cards.forEach((card) => {
-      // Cards slide up from bottom and stack
+    // Create sequential stacking animation
+    cards.forEach((card, index) => {
       gsap.from(card, {
         scrollTrigger: {
-          trigger: card,
-          start: 'top 85%',
+          trigger: sectionRef.current,
+          start: 'top 60%',
           toggleActions: 'play none none reverse',
         },
-        y: 100,
+        y: window.innerHeight * 0.5, // Start from 50vh below
         opacity: 0,
+        scale: 0.95,
         duration: 1.2,
+        delay: index * 0.3, // Sequential delay for stacking effect
         ease: 'power3.out',
       });
     });

@@ -186,9 +186,13 @@ export interface ContentData {
   elevator_pitch: ElevatorPitchData;
   video_showcase?: VideoShowcaseData;
   problem_stacking: ProblemStackingData;
+  potentials: PotentialsData;
+  testimonials_banner: TestimonialsBannerData;
   onboarding_diagonal: OnboardingDiagonalData;
   problem_section: ProblemSectionData;
   horizontal_process: HorizontalProcessData;
+  usps: UspsData;
+  benefits: BenefitsData;
   testimonials: TestimonialsData;
   cta_final: CtaFinalData;
 }

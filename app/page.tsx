@@ -6,6 +6,8 @@ import { Potentials } from '@/components/sections/Potentials';
 import { TestimonialsBanner } from '@/components/sections/TestimonialsBanner';
 import { OnboardingDiagonal } from '@/components/sections/OnboardingDiagonal';
 import { HorizontalProcess } from '@/components/sections/HorizontalProcess';
+import { USPs } from '@/components/sections/USPs';
+import { Benefits } from '@/components/sections/Benefits';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { CTA } from '@/components/sections/CTA';
 import contentData from '@/data/content.json';
@@ -24,6 +26,8 @@ export default function Home() {
         <TestimonialsBanner data={contentData.testimonials_banner} />
         <OnboardingDiagonal data={contentData.onboarding_diagonal} />
         <HorizontalProcess data={contentData.horizontal_process} />
+        <USPs data={contentData.usps} />
+        <Benefits data={contentData.benefits} />
         <Testimonials data={contentData.testimonials} />
         <CTA data={contentData.cta_final} />
       </main>
