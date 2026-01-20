@@ -122,8 +122,17 @@ export function HeroWorkwear({ data, elevatorPitch }: HeroWorkwearProps) {
             "{data.subline.split('.')[0]}."
           </p>
 
-          {/* Video Trigger Button */}
-          <div className="hero-cta pt-12 flex flex-col items-center gap-4">
+          {/* CTA Buttons */}
+          <div className="hero-cta pt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+            {/* Primary CTA Button */}
+            <a
+              href="#kontakt"
+              className="px-10 py-5 bg-orange-600 text-white rounded-full font-bold hover:bg-orange-700 hover:scale-105 transition-all duration-300"
+            >
+              {data.cta_primary}
+            </a>
+
+            {/* Video Trigger Button */}
             <button
               onClick={() => setIsVideoOpen(true)}
               className="group flex items-center gap-4 cursor-pointer"

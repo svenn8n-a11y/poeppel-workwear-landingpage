@@ -132,8 +132,8 @@
   },
   "potentials": {
     "section_id": "potentials",
-    "headline": "Ihre Potentiale. Unsere Lösungen.",
-    "subheadline": "Wir verwandeln versteckte Kostentreiber in messbare Einsparungen und echte Effizienzgewinne.",
+    "headline": "Vom Chaos zum System.",
+    "subheadline": "Scrollen Sie nach rechts, um den Prozess zu erleben.",
     "cards": [
       {
         "id": 1,
@@ -412,6 +412,7 @@
     ]
   },
   "cta_final": {
+    "section_id": "kontakt",
     "headline": "Bereit für das nächste Level?",
     "text": "Lassen Sie uns gemeinsam den Weg zur digitalen Workwear-Strategie ebnen.",
     "button_primary": "Beratungstermin vereinbaren",

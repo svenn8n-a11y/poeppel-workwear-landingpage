@@ -98,16 +98,19 @@ export function Potentials({ data }: PotentialsProps) {
     <section
       ref={sectionRef}
       id={data.section_id}
-      className="relative bg-slate-50 overflow-hidden"
+      className="relative bg-slate-950 overflow-hidden"
       style={{ height: '100vh' }}
     >
       {/* Section Header */}
       <div className="absolute top-16 left-0 right-0 z-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900">
+          <div className="text-orange-500 font-bold uppercase tracking-widest text-xs mb-4">
+            Der Pöppel Kreislauf
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
             {data.headline}
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl text-slate-600">
+          <p className="text-lg md:text-xl max-w-2xl text-slate-400">
             {data.subheadline}
           </p>
         </div>
@@ -116,35 +119,45 @@ export function Potentials({ data }: PotentialsProps) {
       {/* Horizontal Scroll Container */}
       <div
         ref={containerRef}
-        className="absolute top-0 left-0 h-full flex items-center gap-8 px-6 md:px-12"
+        className="absolute top-0 left-1/2 -translate-x-1/2 h-full flex items-center gap-20 px-6 md:px-20"
         style={{ paddingTop: '12rem', width: 'max-content' }}
       >
         {data.cards.map((card) => {
-          const colors = colorMap[card.color as keyof typeof colorMap] || colorMap.blue;
+          const colors = colorMap[card.color as keyof typeof colorMap] || colorMap.orange;
 
           return (
             <div
               key={card.id}
-              className="potential-card bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row relative"
+              className="potential-card group bg-slate-900 rounded-[3rem] border border-white/10 overflow-hidden flex flex-col md:flex-row relative transition-all duration-700"
               style={{
-                width: '85vw',
-                maxWidth: '1100px',
+                width: '80vw',
+                maxWidth: '700px',
                 height: '500px',
               }}
             >
-              {/* Card Number - Top Left */}
-              <div className="absolute top-8 left-8 z-20">
-                <span className={`text-8xl font-bold ${colors.text} opacity-20`}>
+              {/* Content Section - Left Side */}
+              <div className="flex-1 p-10 flex flex-col justify-between z-10">
+                {/* Card Number - Large Background */}
+                <span className="text-6xl font-black text-white/5">
                   {card.number}
                 </span>
+
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold text-white group-hover:text-orange-500 transition-colors">
+                    {card.title}
+                  </h3>
+                  <h4 className="text-lg font-serif italic text-slate-400">
+                    {card.description}
+                  </h4>
+                </div>
               </div>
 
-              {/* Image Section - Left Side */}
-              <div className="relative w-full md:w-1/2 h-64 md:h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200">
+              {/* Image Section - Right Side */}
+              <div className="w-full md:w-1/2 h-full relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
                   {/* Placeholder for image */}
                   <div className="w-full h-full flex items-center justify-center">
-                    <div className={`w-32 h-32 ${colors.accent} rounded-full opacity-20`}></div>
+                    <div className={`w-32 h-32 ${colors.accent} rounded-full opacity-20 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700`}></div>
                   </div>
                 </div>
                 {/* Uncomment when images are available */}
@@ -152,26 +165,8 @@ export function Potentials({ data }: PotentialsProps) {
                   src={card.image}
                   alt={card.title}
                   fill
-                  className="object-cover"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                 /> */}
-              </div>
-
-              {/* Content Section - Right Side */}
-              <div className="w-full md:w-1/2 p-12 flex flex-col justify-center relative">
-                {/* Colored Accent Bar */}
-                <div className={`absolute left-0 top-12 bottom-12 w-1 ${colors.accent}`}></div>
-
-                <div className="pl-8">
-                  <h3 className="text-4xl font-bold mb-6 text-slate-900">
-                    {card.title}
-                  </h3>
-                  <p className="text-xl text-slate-600 leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-
-                {/* Bottom accent line */}
-                <div className={`absolute bottom-8 right-8 w-24 h-1 ${colors.accent}`}></div>
               </div>
             </div>
           );
@@ -181,8 +176,18 @@ export function Potentials({ data }: PotentialsProps) {
         <div className="w-12 flex-shrink-0"></div>
       </div>
 
+      {/* Progress Bar */}
+      <div className="absolute bottom-20 left-6 right-6 h-[1px] bg-white/10 z-20">
+        <div
+          className="h-full bg-orange-500 transition-all duration-100 ease-linear"
+          style={{
+            width: `${Math.min(100, Math.max(0, (containerRef.current?.getBoundingClientRect().left || 0) * -1 / (containerRef.current?.scrollWidth || 1) * 100))}%`
+          }}
+        />
+      </div>
+
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 text-slate-400 text-sm">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 text-slate-500 text-sm">
         <span>Scrollen Sie weiter</span>
         <svg
           className="w-6 h-6 animate-bounce"

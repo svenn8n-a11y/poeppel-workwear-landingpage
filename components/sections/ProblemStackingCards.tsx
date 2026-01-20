@@ -63,8 +63,8 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
       className="relative bg-slate-100 text-slate-900 py-24 px-6 md:px-12"
     >
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto mb-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+      <div className="max-w-7xl mx-auto mb-20">
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Die Kaskade der{' '}
           <span className="text-orange-600 font-serif italic">Ineffizienz</span>
         </h2>
@@ -91,12 +91,12 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
               }}
             >
               {/* Card Title */}
-              <div className={`px-8 md:px-12 py-6 border-b ${isDark ? 'border-slate-700' : 'border-slate-200'}`}>
-                <h3 className="text-2xl md:text-3xl font-bold">{card.title}</h3>
+              <div className={`p-12 border-b ${isDark ? 'border-slate-700' : 'border-slate-200'}`}>
+                <h3 className="text-3xl font-bold">{card.title}</h3>
               </div>
 
               {/* 4 Segments Grid */}
-              <div className="grid md:grid-cols-2 gap-6 p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-6 p-12">
                 {card.segments.map((segment, index) => {
                   const Icon = getIconComponent(segment.icon);
 
