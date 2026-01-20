@@ -50,21 +50,21 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
 
       {/* Sticky Stacking Cards - Entwurf 1 Style */}
       <div className="max-w-7xl mx-auto space-y-32">
-        {data.cards.map((card, cardIndex) => {
+        {data.cards.map((card) => {
           const isDark = card.bg_color === 'dark';
-
-          // Sticky positioning like Entwurf 1: first card top-32, second top-40, etc.
-          const stickyTop = cardIndex === 0 ? 'top-32' : 'top-40';
-          const zIndex = cardIndex === 0 ? 'z-10' : 'z-20';
 
           return (
             <div
               key={card.id}
-              className={`sticky ${stickyTop} ${zIndex} ${
+              className={`sticky ${
                 isDark ? 'bg-slate-900 text-white' : 'bg-white'
               } rounded-3xl shadow-2xl ${
                 isDark ? '' : 'border border-slate-200'
               } transition-transform duration-500 hover:scale-[1.02]`}
+              style={{
+                top: card.sticky_top,
+                zIndex: card.z_index,
+              }}
             >
               {/* Card Title */}
               <div className="p-12 pb-6">
