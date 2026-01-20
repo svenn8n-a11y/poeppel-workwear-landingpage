@@ -10,6 +10,12 @@ import {
   Link2,
   Leaf,
   FileCheck,
+  Workflow,
+  DollarSign,
+  TrendingUp,
+  Code,
+  Handshake,
+  PackageCheck,
 } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '@/lib/gsap';
@@ -42,6 +48,12 @@ const iconMap = {
   link: Link2,
   leaf: Leaf,
   'file-check': FileCheck,
+  workflow: Workflow,
+  dollar: DollarSign,
+  'trending-up': TrendingUp,
+  code: Code,
+  handshake: Handshake,
+  'package-check': PackageCheck,
 };
 
 const colorMap = {

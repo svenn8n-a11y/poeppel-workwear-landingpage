@@ -86,7 +86,7 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({ data }) => {
             {data.headline}
           </h2>
           <p className="text-lg md:text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
-            {data.description}
+            {data.subheadline}
           </p>
         </div>
 
@@ -98,44 +98,23 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({ data }) => {
           >
             {/* Video Embed */}
             <div className="relative w-full pb-[56.25%] h-0 bg-black">
-              {data.video_type === 'youtube' ? (
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full border-none"
-                  src={data.video_url}
-                  title={data.headline}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              ) : data.video_type === 'vimeo' ? (
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full border-none"
-                  src={data.video_url}
-                  title={data.headline}
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              ) : (
-                <video
-                  className="absolute top-0 left-0 w-full h-full"
-                  controls
-                  poster={data.poster_image}
-                  preload="metadata"
-                >
-                  <source src={data.video_url} type="video/mp4" />
-                  Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-              )}
+              <iframe
+                className="absolute top-0 left-0 w-full h-full border-none"
+                src={data.video_url}
+                title={data.headline}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
 
-        {/* Optional caption or CTA below video */}
-        {data.caption && (
+        {/* Optional CTA below video */}
+        {data.cta_text && (
           <div className="text-center mt-12">
             <p className="text-base md:text-lg text-zinc-500 italic max-w-2xl mx-auto">
-              {data.caption}
+              {data.cta_text}
             </p>
           </div>
         )}

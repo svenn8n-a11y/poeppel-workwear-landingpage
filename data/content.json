@@ -137,30 +137,34 @@
     "cards": [
       {
         "id": 1,
-        "title": "Budgettransparenz",
-        "description": "Echtzeit-Übersicht über alle Ausgaben. Keine versteckten Kosten, keine Überraschungen am Monatsende.",
-        "icon": "eye",
+        "number": "01",
+        "title": "Prozess optimieren",
+        "description": "Steigern Sie die Effizienz entlang der gesamten Wertschöpfungskette",
+        "image": "/images/potential-1.jpg",
         "color": "blue"
       },
       {
         "id": 2,
-        "title": "Zeitersparnis",
-        "description": "Bis zu 70% weniger Verwaltungsaufwand durch Automatisierung und Self-Service für Mitarbeiter.",
-        "icon": "trending",
-        "color": "green"
-      },
-      {
-        "id": 3,
-        "title": "Kostenkontrolle",
-        "description": "Reduzierung von Fehlbestellungen und Retouren um bis zu 90% durch präzise Größenerfassung.",
-        "icon": "dollar",
+        "number": "02",
+        "title": "Kosten reduzieren",
+        "description": "Bilanzwirksames Einsparpotential nutzen",
+        "image": "/images/potential-2.jpg",
         "color": "orange"
       },
       {
+        "id": 3,
+        "number": "03",
+        "title": "Transparenz schaffen",
+        "description": "Unterschiedliche Bedürfnisse für Arbeitskleidung und PSA je nach Job",
+        "image": "/images/potential-3.jpg",
+        "color": "green"
+      },
+      {
         "id": 4,
-        "title": "Prozessoptimierung",
-        "description": "Nahtlose Integration in bestehende Systeme. Automatisierte Workflows von Bestellung bis Abrechnung.",
-        "icon": "workflow",
+        "number": "04",
+        "title": "Flexibilität & Skalierung",
+        "description": "Digitales Beschaffungsmanagement ermöglicht problemlose Flexibilität",
+        "image": "/images/potential-4.jpg",
         "color": "purple"
       }
     ]
@@ -298,66 +302,66 @@
     "tiles": [
       {
         "id": 1,
-        "title": "100 Jahre Expertise",
-        "description": "Textile Kompetenz seit 1923 trifft auf modernste Digitaltechnologie.",
-        "icon": "award",
+        "title": "Prozess Optimierung",
+        "description": "Dauerhaft kostenreduzierte Prozesse. Reduzierung manueller Tätigkeiten.",
+        "icon": "workflow",
         "color": "orange"
       },
       {
         "id": 2,
-        "title": "Zero-Retouren-Strategie",
-        "description": "Anprobetage vor Ort für perfekte Passform von Anfang an.",
-        "icon": "target",
+        "title": "Kostenstellen Verwaltung",
+        "description": "Transparente Budgetverwaltung und Genehmigungsprozesse",
+        "icon": "dollar",
         "color": "blue"
       },
       {
         "id": 3,
-        "title": "Budget-Kontrolle",
-        "description": "Rollenbasierte Budgets mit Echtzeit-Übersicht und automatischer Kontrolle.",
-        "icon": "shield-check",
+        "title": "Kurze Lieferzeiten",
+        "description": "Durch kurze Lieferwege und eigener Veredelung können wir schnell liefern.",
+        "icon": "clock",
         "color": "green"
       },
       {
         "id": 4,
-        "title": "Digitale Plattform",
-        "description": "Intuitive Self-Service Bestellung für Mitarbeiter, 24/7 verfügbar.",
-        "icon": "smartphone",
+        "title": "Skalierbarkeit",
+        "description": "Digitales Beschaffungsmanagement ermöglicht problemloses Wachstum.",
+        "icon": "trending-up",
         "color": "purple"
       },
       {
         "id": 5,
-        "title": "Persönlicher Service",
-        "description": "Fester Ansprechpartner für Ihre Anliegen, kein anonymes Call-Center.",
-        "icon": "user-check",
+        "title": "Individuelle API",
+        "description": "Echte funktionierende Individuallösung statt beschränkter Generallösungen.",
+        "icon": "code",
         "color": "orange"
       },
       {
         "id": 6,
-        "title": "Nahtlose Integration",
-        "description": "Anbindung an Ihre bestehenden ERP- und Personalsysteme.",
-        "icon": "link",
+        "title": "Planungssicherheit",
+        "description": "Preisstabilität und Qualitätsmanagement sorgen für Ruhe in der Planung",
+        "icon": "shield-check",
         "color": "blue"
       },
       {
         "id": 7,
-        "title": "Nachhaltigkeit",
-        "description": "Reduzierung von Retouren und optimierte Logistik schonen die Umwelt.",
-        "icon": "leaf",
+        "title": "Alles aus einer Hand",
+        "description": "Wir stellen den gesamten Wertschöpfungsprozess sicher und betreuen Sie persönlich.",
+        "icon": "handshake",
         "color": "green"
       },
       {
         "id": 8,
-        "title": "Compliance-Sicher",
-        "description": "Automatische Dokumentation aller PSA-relevanten Prozesse.",
-        "icon": "file-check",
+        "title": "Kostensparende Vorkommisionierung",
+        "description": "Wir erleichtern Ihnen zeitraubende Überprüfung und Zuteilung an Ihre Mitarbeiter",
+        "icon": "package-check",
         "color": "purple"
       }
     ]
   },
   "benefits": {
     "section_id": "benefits",
-    "headline": "Der Pöppel-Vorteil",
-    "subheadline": "Messbare Ergebnisse, die Ihr Unternehmen voranbringen.",
+    "headline": "Ihr Gewinn",
+    "subheadline": "Sie bekommen eine Lösung die genau zu Ihnen passt und dauerhaft bilanzwirksam gebundene Ressourcen freisetzt. Sie erhalten eine sichere Lieferkette mit schnellen Lieferzeiten, persönlicher Betreuung und einzigartiger Kostenstellenverwaltung. Aus einer Hand.",
     "items": [
       {
         "id": 1,

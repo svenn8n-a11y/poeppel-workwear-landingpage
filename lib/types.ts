@@ -119,9 +119,10 @@ export interface VideoShowcaseData {
 
 export interface PotentialCard {
   id: number;
+  number: string;
   title: string;
   description: string;
-  icon: string;
+  image: string;
   color: string;
 }
 
@@ -175,6 +176,14 @@ export interface BenefitsData {
   items: BenefitItem[];
 }
 
+export interface CtaData {
+  section_id?: string;
+  headline: string;
+  text: string;
+  button_primary: string;
+  button_secondary: string;
+}
+
 export interface ContentData {
   metadata: {
     project: string;
@@ -194,5 +203,6 @@ export interface ContentData {
   usps: UspsData;
   benefits: BenefitsData;
   testimonials: TestimonialsData;
+  cta?: CtaData;
   cta_final: CtaFinalData;
 }

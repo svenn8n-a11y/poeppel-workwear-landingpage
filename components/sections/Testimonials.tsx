@@ -13,82 +13,97 @@ interface TestimonialsProps {
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ data }) => {
   const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
-      cardsRef.current.forEach((card, index) => {
-        if (!card) return;
+      if (!scrollContainerRef.current) return;
 
-        gsap.from(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 80%',
-            end: 'top 50%',
-            toggleActions: 'play none none reverse',
-          },
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          delay: index * 0.2,
-          ease: 'power3.out',
-        });
+      const testimonials = scrollContainerRef.current.children;
+      const totalWidth = Array.from(testimonials).reduce((acc, el) => acc + (el as HTMLElement).offsetWidth, 0);
+
+      // Create infinite scroll animation from right to left
+      gsap.to(scrollContainerRef.current, {
+        x: -totalWidth / 2,
+        duration: 40,
+        ease: 'none',
+        repeat: -1,
       });
     },
-    { scope: sectionRef }
+    { scope: sectionRef, dependencies: [data.items] }
   );
+
+  // Duplicate items for seamless infinite scroll
+  const duplicatedItems = [...data.items, ...data.items];
 
   return (
     <section
       id={data.section_id}
       ref={sectionRef}
-      className="py-32 bg-gradient-to-br from-zinc-50 via-white to-zinc-50"
+      className="py-24 bg-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl md:text-7xl font-bold text-center text-zinc-900 mb-20">
+      <div className="mb-16 px-6 md:px-12">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-slate-900 mb-4">
           {data.headline}
         </h2>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {data.items.map((testimonial, index) => (
+      {/* Scrolling Banner Container */}
+      <div className="relative">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-8"
+          style={{ width: 'max-content' }}
+        >
+          {duplicatedItems.map((testimonial, index) => (
             <div
               key={index}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              className="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="flex-shrink-0 bg-gradient-to-br from-slate-50 to-white rounded-2xl shadow-lg overflow-hidden border border-slate-200"
+              style={{ width: '700px', height: '320px' }}
             >
-              <div className="mb-8">
-                <Quote className="text-zinc-300" size={48} />
-              </div>
+              <div className="flex h-full">
+                {/* Text Content - Left Side (60%) */}
+                <div className="w-[60%] p-8 flex flex-col justify-between">
+                  <div>
+                    <Quote className="text-orange-500 mb-4" size={32} />
+                    <blockquote className="text-base text-slate-700 leading-relaxed mb-6 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </div>
 
-              <blockquote className="text-xl md:text-2xl text-zinc-700 leading-relaxed mb-8 font-light italic">
-                "{testimonial.quote}"
-              </blockquote>
+                  <div>
+                    <div className="font-bold text-lg text-slate-900">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-sm text-slate-600">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-zinc-200">
-                  {testimonial.image && (
+                {/* Image - Right Side (40%) */}
+                <div className="w-[40%] relative bg-gradient-to-br from-slate-200 to-slate-300">
+                  {testimonial.image ? (
                     <Image
                       src={testimonial.image}
                       alt={testimonial.author}
                       fill
                       className="object-cover"
                     />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-24 h-24 rounded-full bg-orange-500/20"></div>
+                    </div>
                   )}
-                </div>
-                <div>
-                  <div className="font-bold text-lg text-zinc-900">
-                    {testimonial.author}
-                  </div>
-                  <div className="text-sm text-zinc-600">
-                    {testimonial.role}
-                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Gradient Overlays for smooth edge fade */}
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
       </div>
     </section>
   );

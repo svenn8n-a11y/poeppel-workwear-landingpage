@@ -60,28 +60,28 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
     <section
       ref={sectionRef}
       id={data.section_id}
-      className="relative bg-slate-100 text-slate-900 py-40 px-6"
+      className="relative bg-slate-100 text-slate-900 py-24 px-6 md:px-12"
     >
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto mb-32">
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+      <div className="max-w-7xl mx-auto mb-20 px-6 md:px-12">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
           Die Kaskade der{' '}
           <span className="text-orange-600 font-serif italic">Ineffizienz</span>
         </h2>
-        <p className="text-xl max-w-2xl text-slate-600">
+        <p className="text-lg md:text-xl max-w-2xl text-slate-600">
           {data.subheadline}
         </p>
       </div>
 
       {/* Stacking Cards with 4 Segments each */}
-      <div className="space-y-40">
+      <div className="space-y-8">
         {data.cards.map((card) => {
           const isDark = card.bg_color === 'dark';
 
           return (
             <div
               key={card.id}
-              className="problem-card sticky max-w-7xl mx-auto rounded-3xl shadow-2xl"
+              className="problem-card sticky max-w-6xl mx-auto rounded-2xl shadow-xl"
               style={{
                 top: card.sticky_top,
                 zIndex: card.z_index,
@@ -91,40 +91,40 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
               }}
             >
               {/* Card Title */}
-              <div className={`px-12 py-8 border-b ${isDark ? 'border-slate-700' : 'border-slate-200'}`}>
-                <h3 className="text-3xl md:text-4xl font-bold">{card.title}</h3>
+              <div className={`px-8 md:px-12 py-6 border-b ${isDark ? 'border-slate-700' : 'border-slate-200'}`}>
+                <h3 className="text-2xl md:text-3xl font-bold">{card.title}</h3>
               </div>
 
               {/* 4 Segments Grid */}
-              <div className="grid md:grid-cols-2 gap-8 p-12">
+              <div className="grid md:grid-cols-2 gap-6 p-8 md:p-12">
                 {card.segments.map((segment, index) => {
                   const Icon = getIconComponent(segment.icon);
 
                   return (
                     <div
                       key={index}
-                      className={`p-8 rounded-2xl transition-all duration-300 hover:scale-105 ${
+                      className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 ${
                         isDark
                           ? 'bg-slate-800/50 hover:bg-slate-800'
                           : 'bg-slate-50 hover:bg-slate-100'
                       }`}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-3">
                         {/* Icon */}
                         <div
-                          className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${
+                          className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
                             isDark
                               ? 'bg-orange-500/20 text-orange-400'
                               : 'bg-orange-100 text-orange-600'
                           }`}
                         >
-                          <Icon className="w-6 h-6" />
+                          <Icon className="w-5 h-5" />
                         </div>
 
                         {/* Content */}
                         <div className="flex-1">
                           <h4
-                            className={`text-lg font-bold mb-2 ${
+                            className={`text-base md:text-lg font-bold mb-2 ${
                               isDark ? 'text-white' : 'text-slate-900'
                             }`}
                           >
