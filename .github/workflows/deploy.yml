@@ -41,13 +41,14 @@ jobs:
 
       - name: Export static files
         run: |
-          mkdir -p out
-          cp -r .next/static out/_next
+          mkdir -p out/_next
+          cp -r .next/static out/_next/
           cp -r public/* out/ 2>/dev/null || true
           find .next/server/app -name '*.html' -exec cp {} out/ \;
           find .next/server/app -name 'index.txt' -exec cp {} out/ \;
           echo "✓ Static export created"
           ls -la out/
+          ls -la out/_next/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
