@@ -1,6 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
 import { Users, DollarSign, ShieldAlert, TrendingDown, Clock, Package, Settings, Database, FileText, AlertTriangle, Layers, Zap } from 'lucide-react';
 import { ProblemStackingData } from '@/lib/types';
 
@@ -24,8 +23,6 @@ const iconMap = {
 };
 
 export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
-  const sectionRef = useRef<HTMLElement>(null);
-
   const getIconComponent = (iconName: string) => {
     const Icon = iconMap[iconName as keyof typeof iconMap] || AlertTriangle;
     return Icon;
@@ -33,7 +30,6 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
 
   return (
     <section
-      ref={sectionRef}
       id={data.section_id}
       className="relative bg-slate-100 text-slate-900 py-32 px-6"
     >
@@ -48,34 +44,25 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
         </p>
       </div>
 
-      {/* Sticky Stacking Cards - Entwurf 1 Style */}
-      <div className="max-w-7xl mx-auto space-y-32">
+      {/* Sticky Stacking Cards - Exact Entwurf 1 Structure */}
+      <div className="space-y-32">
         {data.cards.map((card) => {
           const isDark = card.bg_color === 'dark';
 
           return (
             <div
               key={card.id}
-              className={`sticky ${
+              className={`sticky max-w-7xl mx-auto ${
                 isDark ? 'bg-slate-900 text-white' : 'bg-white'
-              } rounded-3xl shadow-2xl ${
+              } rounded-3xl p-12 shadow-2xl ${
                 isDark ? '' : 'border border-slate-200'
-              } transition-transform duration-500 hover:scale-[1.02]`}
+              } grid md:grid-cols-2 gap-12 items-center transition-transform duration-500 hover:scale-[1.02]`}
               style={{
                 top: card.sticky_top,
                 zIndex: card.z_index,
               }}
             >
-              {/* Card Title */}
-              <div className="p-12 pb-6">
-                <h3 className={`text-2xl md:text-3xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                  {card.title}
-                </h3>
-              </div>
-
-              {/* Two Column Grid for Segments */}
-              <div className="grid md:grid-cols-2 gap-12 px-12 pb-12">
-              {/* Left Column - Segments */}
+              {/* Left Column - First 2 Segments */}
               <div className="space-y-6">
                 {card.segments.slice(0, 2).map((segment, index) => {
                   const Icon = getIconComponent(segment.icon);
@@ -103,7 +90,7 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
                 })}
               </div>
 
-              {/* Right Column - Segments */}
+              {/* Right Column - Last 2 Segments */}
               <div className="space-y-6">
                 {card.segments.slice(2, 4).map((segment, index) => {
                   const Icon = getIconComponent(segment.icon);
@@ -129,7 +116,6 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
                     </div>
                   );
                 })}
-              </div>
               </div>
             </div>
           );
