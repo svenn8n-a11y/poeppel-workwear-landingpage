@@ -49,7 +49,7 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
       </div>
 
       {/* Sticky Stacking Cards - Entwurf 1 Style */}
-      <div className="space-y-32">
+      <div className="max-w-7xl mx-auto space-y-32">
         {data.cards.map((card, cardIndex) => {
           const isDark = card.bg_color === 'dark';
 
@@ -62,10 +62,19 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
               key={card.id}
               className={`sticky ${stickyTop} ${zIndex} ${
                 isDark ? 'bg-slate-900 text-white' : 'bg-white'
-              } rounded-3xl p-12 shadow-2xl ${
+              } rounded-3xl shadow-2xl ${
                 isDark ? '' : 'border border-slate-200'
-              } grid md:grid-cols-2 gap-12 items-center transition-transform duration-500 hover:scale-[1.02]`}
+              } transition-transform duration-500 hover:scale-[1.02]`}
             >
+              {/* Card Title */}
+              <div className="p-12 pb-6">
+                <h3 className={`text-2xl md:text-3xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                  {card.title}
+                </h3>
+              </div>
+
+              {/* Two Column Grid for Segments */}
+              <div className="grid md:grid-cols-2 gap-12 px-12 pb-12">
               {/* Left Column - Segments */}
               <div className="space-y-6">
                 {card.segments.slice(0, 2).map((segment, index) => {
@@ -120,6 +129,7 @@ export function ProblemStackingCards({ data }: ProblemStackingCardsProps) {
                     </div>
                   );
                 })}
+              </div>
               </div>
             </div>
           );
