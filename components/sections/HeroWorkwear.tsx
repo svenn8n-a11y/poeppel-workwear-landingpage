@@ -107,7 +107,7 @@ export function HeroWorkwear({ data, elevatorPitch }: HeroWorkwearProps) {
           </div>
 
           {/* Headline */}
-          <h1 className="hero-headline text-6xl md:text-9xl font-bold tracking-tighter leading-[0.9] text-white mix-blend-overlay opacity-90">
+          <h1 className="hero-headline text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-white">
             {data.headline.split(' ').map((word, idx) => (
               <span key={idx}>
                 {word}
@@ -118,7 +118,7 @@ export function HeroWorkwear({ data, elevatorPitch }: HeroWorkwearProps) {
           </h1>
 
           {/* Quote/Subline */}
-          <p className="hero-quote text-xl md:text-3xl font-serif italic text-slate-300 max-w-2xl mx-auto">
+          <p className="hero-quote text-lg md:text-2xl font-serif italic text-slate-300 max-w-2xl mx-auto">
             "{data.subline.split('.')[0]}."
           </p>
 

@@ -119,8 +119,8 @@ export function Potentials({ data }: PotentialsProps) {
       {/* Horizontal Scroll Container */}
       <div
         ref={containerRef}
-        className="absolute top-0 left-1/2 -translate-x-1/2 h-full flex items-center gap-20 px-6 md:px-20"
-        style={{ paddingTop: '12rem', width: 'max-content' }}
+        className="absolute h-full flex items-center gap-20 px-20"
+        style={{ paddingTop: '12rem', width: 'max-content', left: '0' }}
       >
         {data.cards.map((card) => {
           const colors = colorMap[card.color as keyof typeof colorMap] || colorMap.orange;
